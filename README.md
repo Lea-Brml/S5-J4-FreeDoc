@@ -1,5 +1,8 @@
 # README
 
+Cette exercice permet de lier les BDD relatives à des docteurs, leurs patients et RDV 
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
