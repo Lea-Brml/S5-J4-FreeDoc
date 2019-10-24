@@ -24,7 +24,7 @@ end
 
 6.times do |index|
 
-  d = Doctor.create(id:index, first_name: Faker::Name.first_name, last_name: Faker::Name.middle_name, speciality:["Docteur de la tête","Docteur des pieds","Docteur du ventre","Docteur du dos"].sample, zip_code: Faker::Address.zip_code, city: city_array.sample)
+  d = Doctor.create(id:index, first_name: Faker::Name.first_name, last_name: Faker::Name.middle_name, zip_code: Faker::Address.zip_code, city: city_array.sample)
   doctor_array << d
   p = Patient.create(id:index, first_name: Faker::Name.first_name, last_name: Faker::Name.middle_name, city: city_array.sample)
   patient_array << p
@@ -34,6 +34,8 @@ end
 
 6.times do |index|
 
+
+  Specialty.create(specialty:["Docteur de la tête","Docteur des pieds","Docteur du ventre","Docteur du dos"].sample)
   Appointment.create(id:index, date: Faker::Time.forward(days: 28),doctor: doctor_array.sample, patient: patient_array.sample)
 
 end
